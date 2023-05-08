@@ -6,16 +6,14 @@ const AppProvider = AppContext.Provider;
 
 
 export const MyProvider = ({children}) => {
-  const [myName, setName] = useState('shahzaib')
-let name = 'name';
-let age = 50;
+  const [myName, setName] = useState()
 let loggedIn = false;
 const setMyName = (name) => {
   setName(name);
   loggedIn = true
 }
   return (
-    <AppProvider value={{name, age, myName, setMyName, }}>{children}</AppProvider>
+    <AppProvider value={{ myName, setMyName, }}>{children}</AppProvider>
   )
 }
 

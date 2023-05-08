@@ -6,10 +6,17 @@ function HeroSection () {
   const {name, age, myName, setMyName} = MyContext();
   return (
     <>
-    <div>heroSection component{name} {age} {myName}</div>
-    <button onClick={() => setMyName('my new name is jhanzaib')}>click</button>
+    <div>For List Click me! {myName} </div>
+    <button onClick={() => setMyName([
+      <dev class="list-item">
+        <ul>Mouse</ul>
+        <ul>cabel</ul>
+        <ul>Laptop</ul>
+      </dev>
+    ])}>
+      click
+      </button>
     </>
   )
 };
-
 export default (HeroSection)
